@@ -4,7 +4,7 @@ A documented machine-learning workflow for exploring customer churn from Spotify
 
 ## Project
 
-The notebook loads the supplied dataset, checks its structure and target balance, preprocesses mixed numerical and categorical features, compares several classifiers with stratified cross-validation, and evaluates the selected pipeline once on a held-out test set.
+The notebook loads the supplied dataset, checks its structure and target balance, preprocesses mixed numerical and categorical features, compares several classifiers with stratified cross-validation, and evaluates the selected pipeline against a majority-class baseline on a held-out test set.
 
 The pipeline keeps preprocessing and optional random oversampling inside each training fold. The identifier is excluded from model inputs, and the test set is not used to choose a model. Evaluation includes precision, recall, F1, ROC-AUC, a classification report, and a confusion matrix.
 
