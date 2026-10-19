@@ -24,7 +24,7 @@ The pipeline keeps preprocessing and optional random oversampling inside each tr
 - no feature is significantly associated with churn (univariate Mann–Whitney U and chi-square tests, all p > 0.05), and churn rates are about 25–27% in every category;
 - a permutation test shows that the cross-validated ROC-AUC with the real labels (0.51) is not significantly better than with randomly shuffled labels (p ≈ 0.15).
 
-The pipeline itself is sound: the same diagnostics that guard against data leakage are what made it possible to detect the lack of signal instead of over-tuning the model on the test set. The numbers above are produced by the notebook with fixed random seeds.
+The pipeline itself is sound: the same checks that guard against data leakage are what made it possible to detect the lack of signal instead of over-tuning the model on the test set. The numbers above are produced by the notebook with fixed random seeds.
 
 ## Files
 
@@ -47,6 +47,6 @@ Keep the dataset at `data/spotify_churn_dataset.csv`; the notebook uses this rel
 
 [Spotify Dataset for Churn Analysis — Kaggle](https://www.kaggle.com/datasets/nabihazahid/spotify-dataset-for-churn-analysis). Please consult the source page for its license and terms of use.
 
-## Limitations and next steps
+## Next steps
 
-Results from this dataset are exploratory and should not be treated as evidence of production readiness. Because the features carry no signal here, the natural next step is to apply the same pipeline to churn data with real behavioral history (for example, trends in listening activity over time), engineer time-based features, and choose the decision threshold from the explicit cost of false positives and false negatives.
+Because the features carry no signal in this dataset, the natural next step is to apply the same pipeline to churn data with real behavioral history (for example, trends in listening activity over time), engineer time-based features, and choose the decision threshold from the explicit cost of false positives and false negatives.
